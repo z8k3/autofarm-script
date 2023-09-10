@@ -1,0 +1,238 @@
+--Made by : https://v3rmillion.net/member.php?action=profile&uid=507120
+--Go vouch release thread : https://v3rmillion.net/showthread.php?tid=1040650
+-- scripts to use for script making, dark dex, simple spy, hydroxide if u dont like simple spy, and x ghost hub cuz i found a position reader (might use for tp)
+-- not the best BUT its my first autofarm script (might add some more)
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+
+local w = library:CreateWindow("Zek's scripts") -- Creates the window
+
+local b = w:CreateFolder("runstar autofarm") -- Creates the folder(U will put here your buttons,etc)
+
+local c = w:CreateFolder("boxer clicker autofarm")
+
+local d = w:CreateFolder("dead lifting autofarm")
+
+local e = w:CreateFolder("ninja legends autofarm")
+
+local f = w:CreateFolder("strongest punch sim autofarm")
+
+local g = w:CreateFolder("Power Slap autofarm")
+
+local a = w:CreateFolder("Ninja Fighting autofarm")
+
+local h = w:CreateFolder("Tug Of War autofarm")
+
+local i = w:CreateFolder("Kung Fu Simulator")
+
+b:Label("runstar autofarm",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+}) 
+
+
+b:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = "20" --rejoin and change value according to number of treadmill if u wanna get better speed
+        }
+    
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Train"):WaitForChild("AddSpeed"):FireServer(unpack(args))
+    end
+
+end)
+
+b:Toggle("AutoRaceClick (might not work)",function(bool)
+    shared.toggle = bool
+    
+    --MIGHT NOT WORK
+    while wait() do
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Race"):WaitForChild("RaceClick"):InvokeServer()
+    end
+
+end)
+
+
+b:DestroyGui()
+
+---------------------------------------------------------------------------------------
+
+c:Label("boxer clicker autofarm",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+}) 
+
+c:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    
+    while wait() do
+        local args = {
+            [1] = 1
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Train"):WaitForChild("AddArm"):FireServer(unpack(args))
+    end
+
+end)
+
+
+c:DestroyGui()
+
+---------------------------------------------------------------------------------------
+
+d:Label("dead lifting autofarm",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+}) 
+
+d:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    
+    while wait() do
+        local args = {
+            [1] = "false"
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Events"):WaitForChild("Click"):FireServer(unpack(args))
+    end
+
+end)
+
+
+d:DestroyGui()
+
+---------------------------------------------------------------------------------------
+
+e:Label("ninja autofarm",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+}) 
+
+e:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    
+    while wait() do
+        local args = {
+            [1] = "swingKatana"
+        }
+        game:GetService("Players").LocalPlayer:WaitForChild("ninjaEvent"):FireServer(unpack(args))
+    end
+
+end)
+
+e:Toggle("Auto buy rank (most likely wont work)", function(bool)
+    while wait(3) do
+        local args = {
+            [1] = "buyRank",
+            [2] = "Cybernetic Azure Sensei"
+        }
+        game:GetService("Players").LocalPlayer:WaitForChild("ninjaEvent"):FireServer(unpack(args))
+    end
+end)
+
+e:DestroyGui()
+
+---------------------------------------------------------------------------------------
+
+f:Label("strongest punch sim autofarm",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+})
+
+f:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    
+    while wait() do
+        local args = {
+            [1] = {
+                [1] = "Activate_Punch"
+                
+            }
+        
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+    end
+    
+    
+
+end) -- orca on fluxus goes HARD
+
+---------------------------------------------------------------------------------------
+
+g:Label("Power Slap Simulator",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+})
+
+g:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = "ClickStat",
+            [2] = 1 --change according to slapping dummy
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+    end
+end)
+
+---------------------------------------------------------------------------------------
+
+g:Label("Ninja Fighting Simulator",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+})
+
+g:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    while wait() do
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DoAction"):FireServer()
+    end
+end)
+
+---------------------------------------------------------------------------------------
+
+h:Label("Tug of War Simulator",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+})
+
+h:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    while wait() do
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("ToolServices"):WaitForChild("RE"):WaitForChild("Activated"):FireServer()
+    end
+end)
+
+---------------------------------------------------------------------------------------
+
+i:Label("Kung Fu Simulator",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+})
+
+i:Toggle("autofarm (need to be in range of punching bag)",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("1"):WaitForChild("Clyinder")
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
+    end
+end)
