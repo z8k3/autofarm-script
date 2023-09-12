@@ -237,7 +237,7 @@ i:Toggle("autofarm for second bag",function(bool)
     shared.toggle = bool
     while wait() do
         local args = {
-            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("2"):WaitForChild("Cylinder")
+            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("2"):WaitForChild("Cylinder.004")
         }
         game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
     end
@@ -247,7 +247,7 @@ i:Toggle("autofarm for third bag",function(bool)
     shared.toggle = bool
     while wait() do
         local args = {
-            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("3"):WaitForChild("Cylinder.004")
+            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("3"):WaitForChild("Cylinder.008")
         }
         game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
     end
@@ -257,7 +257,7 @@ i:Toggle("autofarm for fourth bag",function(bool)
     shared.toggle = bool
     while wait() do
         local args = {
-            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("3"):WaitForChild("Cylinder.012")
+            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("4"):WaitForChild("Cylinder.012")
         }
         game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
     end
@@ -307,54 +307,6 @@ i:Toggle("autofarm for fourth bag",function(bool)
     while wait() do
         local args = {
             [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone2"):WaitForChild("skill"):WaitForChild("4"):WaitForChild("Cylinder.012")
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
-    end
-end)
-
--- temple shrine here
-i:Label("temple shrine here",{
-    TextSize = 25; -- Self Explaining
-    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
-    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
-    
-})
-
-i:Toggle("autofarm for first bag",function(bool)
-    shared.toggle = bool
-    while wait() do
-        local args = {
-            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone3"):WaitForChild("skill"):WaitForChild("1"):WaitForChild("Cylinder")
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
-    end
-end)
-
-i:Toggle("autofarm for second bag",function(bool)
-    shared.toggle = bool
-    while wait() do
-        local args = {
-            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone3"):WaitForChild("skill"):WaitForChild("2"):WaitForChild("Cylinder.004")
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
-    end
-end)
-
-i:Toggle("autofarm for third bag",function(bool)
-    shared.toggle = bool
-    while wait() do
-        local args = {
-            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone3"):WaitForChild("skill"):WaitForChild("3"):WaitForChild("Cylinder.008")
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
-    end
-end)
-
-i:Toggle("autofarm for fourth bag",function(bool)
-    shared.toggle = bool
-    while wait() do
-        local args = {
-            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone3"):WaitForChild("skill"):WaitForChild("4"):WaitForChild("Cylinder.012")
         }
         game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
     end
