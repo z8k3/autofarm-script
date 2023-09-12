@@ -25,6 +25,8 @@ local h = w:CreateFolder("Tug Of War autofarm")
 
 local i = w:CreateFolder("Kung Fu Simulator")
 
+local j = w:CreateFolder("Undertale Judgement Day")
+
 b:Label("runstar autofarm",{
     TextSize = 25; -- Self Explaining
     TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
@@ -79,9 +81,6 @@ c:Toggle("Toggle",function(bool)
 
 end)
 
-
-c:DestroyGui()
-
 ---------------------------------------------------------------------------------------
 
 d:Label("dead lifting autofarm",{
@@ -102,9 +101,6 @@ d:Toggle("Toggle",function(bool)
     end
 
 end)
-
-
-d:DestroyGui()
 
 ---------------------------------------------------------------------------------------
 
@@ -136,8 +132,6 @@ e:Toggle("Auto buy rank (most likely wont work)", function(bool)
         game:GetService("Players").LocalPlayer:WaitForChild("ninjaEvent"):FireServer(unpack(args))
     end
 end)
-
-e:DestroyGui()
 
 ---------------------------------------------------------------------------------------
 
@@ -231,8 +225,82 @@ i:Toggle("autofarm (need to be in range of punching bag)",function(bool)
     shared.toggle = bool
     while wait() do
         local args = {
-            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("1"):WaitForChild("Clyinder")
+            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("1"):WaitForChild("Cylinder")
         }
         game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
     end
 end)
+
+i:Toggle("autofarm for second bag",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("2"):WaitForChild("Cylinder.004")
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
+    end
+end)
+
+i:Toggle("autofarm for third bag",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("3"):WaitForChild("Cylinder.008")
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
+    end
+end)
+
+i:Toggle("autofarm for fourth bag",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("4"):WaitForChild("Cylinder.012")
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
+    end
+end)
+
+i:Toggle("autofarm for VIP bag (prob wont work if you dont have it)",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("VIP"):WaitForChild("Cylinder.016")
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
+    end
+end)
+
+-- loadstring(game:HttpGet('https://raw.githubusercontent.com/z8k3/autofarm-script/main/autofarm%20all%20script'))()
+
+---------------------------------------------------------------------------------------
+
+j:Label("undertale judgement day",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+})
+
+j:Label("talk to dustdust",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+})
+
+j:Toggle("undertale exp farm",function(bool)
+    shared.toggle = bool
+        --ADD A TXT NOTE WITH THE SCRIPT INSIDE OF THE autoexec FOLDER ON UR EXECUTOR:
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Trollge23/Ujd-gui-pro/main/UJD%20AUTOFARM%202.0"))()
+end)
+
+j:Label("credits to ScriptTale discord server for this script, discord ---> https://discord.gg/Hzdwfd8F",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+})
+
+---------------------------------------------------------------------------------------
+
