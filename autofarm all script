@@ -55,7 +55,7 @@ b:Toggle("AutoRaceClick (might not work)",function(bool)
     
     --MIGHT NOT WORK
     while wait() do
-        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Race"):WaitForChild("RaceClick"):InvokeServer()
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Race"):WaitForChild("RaceClick"):FireServer()
     end
 
 end)
