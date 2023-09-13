@@ -23,11 +23,13 @@ local a = w:CreateFolder("Ninja Fighting autofarm")
 
 local h = w:CreateFolder("Tug Of War autofarm")
 
-local i = w:CreateFolder("Kung Fu Simulator")
+local i = w:CreateFolder("Kung Fu Simulator autofarm")
 
 local j = w:CreateFolder("Kung Fu Simulatorv2 ")
 
 local k = w:CreateFolder("Undertale Judgement Day")
+
+local l = w:CreateFolder("RaceClicker autofarm")
 
 b:Label("runstar autofarm",{
     TextSize = 25; -- Self Explaining
@@ -230,6 +232,13 @@ i:Toggle("autofarm (need to be in range of punching bag)",function(bool)
             [1] = workspace:WaitForChild("Targets"):WaitForChild("TargetsZone1"):WaitForChild("skill"):WaitForChild("1"):WaitForChild("Cylinder")
         }
         game:GetService("ReplicatedStorage"):WaitForChild("WeaponSystem"):WaitForChild("Remotes"):WaitForChild("DummyHit"):FireServer(unpack(args))
+    end
+end)
+
+i:Toggle("auto fight for npcs",function(bool)
+    shared.toggle = bool
+    while wait() do
+        game:GetService("ReplicatedStorage"):WaitForChild("WallSystem"):WaitForChild("Remotes"):WaitForChild("Attack"):FireServer()
     end
 end)
 
