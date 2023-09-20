@@ -5,7 +5,7 @@
 
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
 
-local w = library:CreateWindow("Zek's scripts") -- Creates the window
+local w = library:CreateWindow("minority hub") -- Creates the window
 
 local b = w:CreateFolder("runstar autofarm") -- Creates the folder(U will put here your buttons,etc)
 
@@ -32,6 +32,8 @@ local k = w:CreateFolder("Undertale Judgement Day")
 local l = w:CreateFolder("RaceClicker autofarm")
 
 local m = w:CreateFolder("Super Powers Simulator Autofarm")
+
+local n = w:CreateFolder("Arm Wrestle Simulator")
 
 b:Label("runstar autofarm",{
     TextSize = 25; -- Self Explaining
@@ -525,3 +527,27 @@ l:Toggle("Toggle",function(bool)
 end)
 
 ---------------------------------------------------------------------------------------
+
+n:Label("Arm Wrestle Simulator",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+}) 
+
+
+n:Toggle("Auto Rep",function(bool)
+    shared.toggle = bool
+    while wait() do
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onClick"):FireServer()
+    end
+end)
+
+n:Toggle("Auto click (npcs, 1v1's)",function(bool)
+    shared.toggle = bool
+    while wait() do
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onClickRequest"):FireServer()
+    end
+end)
+
+---------------------------------------------------------------------------------------
+
