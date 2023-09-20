@@ -31,6 +31,8 @@ local k = w:CreateFolder("Undertale Judgement Day")
 
 local l = w:CreateFolder("RaceClicker autofarm")
 
+local m = w:CreateFolder("Super Powers Simulator Autofarm")
+
 b:Label("runstar autofarm",{
     TextSize = 25; -- Self Explaining
     TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
@@ -38,17 +40,90 @@ b:Label("runstar autofarm",{
 }) 
 
 
-b:Toggle("Toggle",function(bool)
+b:Toggle("First Treadmill",function(bool)
     shared.toggle = bool
     while wait() do
         local args = {
-            [1] = "20" --rejoin and change value according to number of treadmill if u wanna get better speed
+            [1] = "1" --rejoin and change value according to number of treadmill if u wanna get better speed
         }
     
         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Train"):WaitForChild("AddSpeed"):FireServer(unpack(args))
     end
 
 end)
+
+b:Toggle("Second Treadmill",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = "2" --rejoin and change value according to number of treadmill if u wanna get better speed
+        }
+    
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Train"):WaitForChild("AddSpeed"):FireServer(unpack(args))
+    end
+
+end)
+
+b:Toggle("Third Treadmill",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = "3" --rejoin and change value according to number of treadmill if u wanna get better speed
+        }
+    
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Train"):WaitForChild("AddSpeed"):FireServer(unpack(args))
+    end
+
+end)
+
+b:Toggle("Fourth Treadmill",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = "4" --rejoin and change value according to number of treadmill if u wanna get better speed
+        }
+    
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Train"):WaitForChild("AddSpeed"):FireServer(unpack(args))
+    end
+
+end)
+
+b:Toggle("Fifth Treadmill",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = "5" --rejoin and change value according to number of treadmill if u wanna get better speed
+        }
+    
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Train"):WaitForChild("AddSpeed"):FireServer(unpack(args))
+    end
+
+end)
+
+b:Toggle("Sixth Treadmill",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = "6" --rejoin and change value according to number of treadmill if u wanna get better speed
+        }
+    
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Train"):WaitForChild("AddSpeed"):FireServer(unpack(args))
+    end
+
+end)
+
+b:Toggle("Seventh Treadmill",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = "7" --rejoin and change value according to number of treadmill if u wanna get better speed
+        }
+    
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Train"):WaitForChild("AddSpeed"):FireServer(unpack(args))
+    end
+
+end)
+
 
 b:Toggle("AutoRaceClick (might not work)",function(bool)
     shared.toggle = bool
@@ -401,3 +476,34 @@ k:Label("credits to ScriptTale discord server for this script, discord ---> http
 
 ---------------------------------------------------------------------------------------
 
+m:Label("Super Powers Simulator",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+})
+
+m:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    
+    while wait() do
+        local args = {
+            [1] = "Psychic"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Train"):FireServer(unpack(args))
+        
+        local args = {
+            [1] = "Strength"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Train"):FireServer(unpack(args))
+        
+        local args = {
+            [1] = "Endurance"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Train"):FireServer(unpack(args))
+    end
+
+end)
