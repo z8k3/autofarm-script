@@ -549,5 +549,17 @@ n:Toggle("Auto click (npcs, 1v1's)",function(bool)
     end
 end)
 
+n:Toggle("Auto punch bag",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = "1",
+            [2] = "Tier1"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("PunchBagService"):WaitForChild("RE"):WaitForChild("onGiveStats"):FireServer(unpack(args))
+    end
+end)
+
 ---------------------------------------------------------------------------------------
 
