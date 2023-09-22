@@ -27,7 +27,7 @@ local i = w:CreateFolder("Kung Fu Simulator autofarm")
 
 local j = w:CreateFolder("Kung Fu Simulatorv2 ")
 
-local k = w:CreateFolder("Undertale Judgement Day")
+local k = w:CreateFolder("UJD(undertale)")
 
 local l = w:CreateFolder("RaceClicker autofarm")
 
@@ -553,8 +553,32 @@ n:Toggle("Auto punch bag",function(bool)
     shared.toggle = bool
     while wait() do
         local args = {
-            [1] = "1",
-            [2] = "Tier1"
+            [1] = "1", --map
+            [2] = "Tier1"--bag
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("PunchBagService"):WaitForChild("RE"):WaitForChild("onGiveStats"):FireServer(unpack(args))
+    end
+end)
+
+n:Toggle("Auto punch bag 2",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = "1", --map
+            [2] = "Tier2"--bag
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("PunchBagService"):WaitForChild("RE"):WaitForChild("onGiveStats"):FireServer(unpack(args))
+    end
+end)
+
+n:Toggle("Auto punch bag 3",function(bool)
+    shared.toggle = bool
+    while wait() do
+        local args = {
+            [1] = "1", --map
+            [2] = "Tier3"--bag
         }
         
         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("PunchBagService"):WaitForChild("RE"):WaitForChild("onGiveStats"):FireServer(unpack(args))
